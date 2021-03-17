@@ -6,6 +6,7 @@ using UnityEngine.UI;
 public class Scoring : MonoBehaviour
 {
     public static Scoring scoringInstance;
+    public playerController plcontroller;
 
     public int score = 50;
     public Text textScore;
@@ -30,7 +31,7 @@ public class Scoring : MonoBehaviour
 
     public void updateHealth()
     {
-        healthScore.text = "Health: " + playerController.pcInstance.playerHealth.ToString();
+        healthScore.text = "Health: " + plcontroller.playerHealth.ToString();
     }
 
     public void AddScore(int points)
@@ -56,7 +57,7 @@ public class Scoring : MonoBehaviour
         if(addHealthOne >= secondsPerHealth)
         {
             Debug.Log("add!");
-            playerController.pcInstance.playerHealth += healthAdded;
+            plcontroller.playerHealth += healthAdded;
 
             updateHealth();
             addHealthOne = 0;

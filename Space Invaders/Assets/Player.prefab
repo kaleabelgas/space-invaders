@@ -85,7 +85,7 @@ SpriteRenderer:
   m_Size: {x: 1, y: 1}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
-  m_WasSpriteAssigned: 1
+  m_WasSpriteAssigned: 0
   m_MaskInteraction: 0
   m_SpriteSortPoint: 0
 --- !u!50 &3621883771208746313
@@ -149,9 +149,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRB: {fileID: 3621883771208746313}
   firepoint: {fileID: 0}
-  scoringSystem: {fileID: 0}
   moveSpeed: 10
   playerHealth: 100
+  shakeDuration: 0
+  shakeStrength: 0
 --- !u!114 &3621883771208746319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -166,7 +167,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 3621883772364564140}
   bulletPrefab: {fileID: 7934975260820470772, guid: b19001373261d6942a93efc06debbcac, type: 3}
-  scoring: {fileID: 0}
   textScore: {fileID: 0}
   bulletForce: 20
   attackSpeed: 0.1
@@ -182,10 +182,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 512ab3bc6590f6a4d8a2762b8063b23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  plcontroller: {fileID: 0}
   score: 50
-  textScore: {fileID: 0}
-  healthScore: {fileID: 0}
-  playercontroller: {fileID: 0}
+  textScore: {fileID: 2777827407342099621, guid: f1cf39644ab37934d8c4e42dfeb2972b, type: 3}
+  healthScore: {fileID: 894363037071203704, guid: d077cc1b0a5e11b43856ef252588baeb, type: 3}
   secondsPerHealth: 10
   secondsPerScore: 1
   healthAdded: 10
