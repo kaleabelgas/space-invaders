@@ -9,6 +9,7 @@ public class enemyManager : MonoBehaviour
     public int enemyHealth = 100;
     public int enemyPoint = 5;
     public float enemyCollisionDamage = 20;
+    public GameObject deathEffect;
 
     private void Start()
     {
@@ -31,6 +32,8 @@ public class enemyManager : MonoBehaviour
     public void Die()
     {
         Scoring.scoringInstance.AddScore(enemyPoint);
+        GameObject dEffect = Instantiate(deathEffect, transform.position, transform.rotation);
+        Destroy(dEffect, 2);
         Destroy(gameObject);
     }
 

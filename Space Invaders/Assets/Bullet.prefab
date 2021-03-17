@@ -118,6 +118,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9d16610c434247048823d82b0f56fcfc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  hitEffectPrefab: {fileID: 8983583404752074904, guid: c0c609cafe317a347a097cb5bf2e2ba7, type: 3}
   cam: {fileID: 2272807120696113148, guid: ccc1e1738559a5a49811f573e9be597c, type: 3}
   damage: 50
 --- !u!58 &7911085005046885144

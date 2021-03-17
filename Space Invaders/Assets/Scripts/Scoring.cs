@@ -8,7 +8,7 @@ public class Scoring : MonoBehaviour
     public static Scoring scoringInstance;
     public playerController plcontroller;
 
-    public int score = 50;
+    public int score = 0;
     public Text textScore;
     public Text healthScore;
     public float secondsPerHealth = 10;

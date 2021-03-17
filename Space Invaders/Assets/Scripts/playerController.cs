@@ -9,6 +9,7 @@ public class playerController : MonoBehaviour
 
     public Rigidbody2D playerRB;
     public Transform firepoint;
+    public GameObject effectPrefab;
 
     public float moveSpeed;
     public float playerHealth = 100f;
@@ -40,6 +41,7 @@ public class playerController : MonoBehaviour
         playerHealth -= collisionDamage;
         Scoring.scoringInstance.updateHealth();
         cameraShake.instance.initializeShake(shakeStrength, shakeDuration);
+        GameObject playerHitEffect = Instantiate(effectPrefab, transform.position, transform.rotation);
         if (playerHealth <= 0 )
         {
             PlayerDie();
