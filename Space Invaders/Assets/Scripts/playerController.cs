@@ -5,14 +5,21 @@ using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
+    public static playerController pcInstance;
+
     public Rigidbody2D playerRB;
     public Transform firepoint;
-    public Scoring scoringSystem;
 
     public float moveSpeed;
     public float playerHealth = 100f;
+    public float shakeDuration;
+    public float shakeStrength;
     private Vector2 moveDirection;
 
+    private void Start()
+    {
+        pcInstance = this;
+    }
 
     private void Update()
     {
@@ -31,11 +38,10 @@ public class playerController : MonoBehaviour
     {
         
         playerHealth -= collisionDamage;
-        scoringSystem = GetComponent<Scoring>();
-        scoringSystem.updateHealth();
+        Scoring.scoringInstance.updateHealth();
+        cameraShake.instance.initializeShake(shakeStrength, shakeDuration);
         if (playerHealth <= 0 )
         {
-
             PlayerDie();
         }
     }
@@ -45,6 +51,7 @@ public class playerController : MonoBehaviour
         Destroy(gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+
 
 
 

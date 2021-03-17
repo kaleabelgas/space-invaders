@@ -8,7 +8,6 @@ public class Shooter : MonoBehaviour
 
     public Transform playerTransform;
     public GameObject bulletPrefab;
-    public Scoring scoring;
     public Text textScore;
 
     public float bulletForce;
@@ -36,10 +35,10 @@ public class Shooter : MonoBehaviour
         isShootingBullet = true;
         yield return new WaitForSeconds(bulletTimer);
 
-        if (scoring.score > 0)
+        if (Scoring.scoringInstance.score > 0)
         {
-            scoring.score--;
-            textScore.text = "Score: " + scoring.score.ToString();
+            Scoring.scoringInstance.score--;
+            textScore.text = "Score: " + Scoring.scoringInstance.score.ToString();
             bullet = Instantiate(bulletPrefab, playerTransform.position, playerTransform.rotation);
             Rigidbody2D bulletRb = bullet.GetComponent<Rigidbody2D>();
             bulletRb.AddForce(playerTransform.up * bulletForce, ForceMode2D.Impulse);
