@@ -5,7 +5,7 @@ using UnityEngine.UI;
 
 public class Scoring : MonoBehaviour
 {
-    private int score = 0;
+    public int score = 50;
     public Text textScore;
     public Text healthScore;
     public playerController playercontroller;

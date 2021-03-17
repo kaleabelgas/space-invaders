@@ -472,6 +472,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 3
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &343891538 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 3621883771208746318, guid: 21732b49203668747b0992af9681f311, type: 3}
+  m_PrefabInstance: {fileID: 3621883772401242195}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 512ab3bc6590f6a4d8a2762b8063b23d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &489158383
 GameObject:
   m_ObjectHideFlags: 0
@@ -696,7 +707,7 @@ Camera:
   m_Enabled: 1
   serializedVersion: 2
   m_ClearFlags: 2
-  m_BackGroundColor: {r: 0.19215687, g: 0.3019608, b: 0.4745098, a: 0}
+  m_BackGroundColor: {r: 0.1792453, g: 0.1792453, b: 0.1792453, a: 0}
   m_projectionMatrixMode: 1
   m_GateFitMode: 2
   m_FOVAxisMode: 0
@@ -900,7 +911,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 1
     m_VerticalOverflow: 1
     m_LineSpacing: 1
-  m_Text: 'HP: 100'
+  m_Text: 'Health: 100'
 --- !u!222 &1118764421
 CanvasRenderer:
   m_ObjectHideFlags: 0
@@ -1197,6 +1208,10 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 3621883771208746318, guid: 21732b49203668747b0992af9681f311, type: 3}
+      propertyPath: score
+      value: 50
+      objectReference: {fileID: 0}
+    - target: {fileID: 3621883771208746318, guid: 21732b49203668747b0992af9681f311, type: 3}
       propertyPath: textScore
       value: 
       objectReference: {fileID: 321907724}
@@ -1208,5 +1223,17 @@ PrefabInstance:
       propertyPath: playercontroller
       value: 
       objectReference: {fileID: 1375524694}
+    - target: {fileID: 3621883771208746319, guid: 21732b49203668747b0992af9681f311, type: 3}
+      propertyPath: scoring
+      value: 
+      objectReference: {fileID: 343891538}
+    - target: {fileID: 3621883771208746319, guid: 21732b49203668747b0992af9681f311, type: 3}
+      propertyPath: textScore
+      value: 
+      objectReference: {fileID: 321907724}
+    - target: {fileID: 3621883771208746319, guid: 21732b49203668747b0992af9681f311, type: 3}
+      propertyPath: attackSpeed
+      value: 0.1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 21732b49203668747b0992af9681f311, type: 3}

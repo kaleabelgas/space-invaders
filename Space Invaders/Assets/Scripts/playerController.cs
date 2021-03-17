@@ -29,11 +29,15 @@ public class playerController : MonoBehaviour
 
     public void PlayerDamage(float collisionDamage)
     {
+        
+        playerHealth -= collisionDamage;
         scoringSystem = GetComponent<Scoring>();
         scoringSystem.updateHealth();
-        playerHealth -= collisionDamage;
         if (playerHealth <= 0)
+        {
+
             PlayerDie();
+        }
     }
 
     private void PlayerDie()

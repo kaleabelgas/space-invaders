@@ -22,8 +22,8 @@ public class enemyManager : MonoBehaviour
 
     public void Die()
     {
-        Destroy(gameObject);
         FindObjectOfType<Scoring>().AddScore(enemyPoint);
+        Destroy(gameObject);
     }
 
     private void OnTriggerEnter2D(Collider2D hitPlayer)
@@ -31,8 +31,9 @@ public class enemyManager : MonoBehaviour
         player = hitPlayer.GetComponent<playerController>();
         if (player != null)
         {
-            player.PlayerDamage(enemyCollisionDamage);
+            
             Destroy(gameObject);
+            player.PlayerDamage(enemyCollisionDamage);
         }
         Debug.Log(hitPlayer.name);
     }
