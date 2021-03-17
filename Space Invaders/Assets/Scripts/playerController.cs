@@ -33,7 +33,7 @@ public class playerController : MonoBehaviour
         playerHealth -= collisionDamage;
         scoringSystem = GetComponent<Scoring>();
         scoringSystem.updateHealth();
-        if (playerHealth <= 0)
+        if (playerHealth <= 0 )
         {
 
             PlayerDie();

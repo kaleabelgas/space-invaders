@@ -77,7 +77,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 7482667652216324306, guid: b5c670ed40ed65141910a18c77851ad5, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 08f7e1b8b85633b4fb4dcc6542bd8ae7, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -126,7 +126,7 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1, y: 1}
+    oldSize: {x: 10, y: 10}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -149,7 +149,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRB: {fileID: 3621883771208746313}
   firepoint: {fileID: 0}
+  scoringSystem: {fileID: 0}
   moveSpeed: 10
+  playerHealth: 100
 --- !u!114 &3621883771208746319
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -164,7 +166,10 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerTransform: {fileID: 3621883772364564140}
   bulletPrefab: {fileID: 7934975260820470772, guid: b19001373261d6942a93efc06debbcac, type: 3}
+  scoring: {fileID: 0}
+  textScore: {fileID: 0}
   bulletForce: 20
+  attackSpeed: 0.1
 --- !u!114 &3621883771208746318
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -177,6 +182,13 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 512ab3bc6590f6a4d8a2762b8063b23d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  score: 50
+  textScore: {fileID: 0}
+  healthScore: {fileID: 0}
+  playercontroller: {fileID: 0}
+  secondsPerHealth: 10
+  secondsPerScore: 1
+  healthAdded: 10
 --- !u!1 &3621883772364564141
 GameObject:
   m_ObjectHideFlags: 0

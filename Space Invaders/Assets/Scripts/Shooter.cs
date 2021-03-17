@@ -45,9 +45,9 @@ public class Shooter : MonoBehaviour
             bulletRb.AddForce(playerTransform.up * bulletForce, ForceMode2D.Impulse);
 
 
-            isShootingBullet = false;
 
         }
+        isShootingBullet = false;
 
         
     }
