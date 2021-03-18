@@ -29,7 +29,7 @@ Transform:
   m_GameObject: {fileID: 1664845138870243899}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 2.95, z: 0}
-  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 0}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -74,7 +74,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 2747690628134850419, guid: 982f66a8cebd8a24f9f231f9c6289da1, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 13069a2078458e5449f427d9811c4fa2, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -100,7 +100,7 @@ Rigidbody2D:
   m_Mass: 1
   m_LinearDrag: 0
   m_AngularDrag: 0.05
-  m_GravityScale: 0.5
+  m_GravityScale: 0.2
   m_Material: {fileID: 0}
   m_Interpolate: 0
   m_SleepingMode: 1
@@ -119,9 +119,9 @@ CircleCollider2D:
   m_IsTrigger: 1
   m_UsedByEffector: 0
   m_UsedByComposite: 0
-  m_Offset: {x: 0, y: 0}
+  m_Offset: {x: 0, y: -0.22}
   serializedVersion: 2
-  m_Radius: 0.41766036
+  m_Radius: 0.37
 --- !u!114 &1664845138870243888
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -134,7 +134,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: cda15292c6a796b42acc7828402e545d, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  player: {fileID: 3621883771208746309, guid: 21732b49203668747b0992af9681f311, type: 3}
-  scoring: {fileID: 0}
   enemyHealth: 100
-  enemyPoint: 5
+  enemyPoint: 20
+  enemyCollisionDamage: 20
+  deathEffect: {fileID: 8983583404752074904, guid: 389f215642fed5b479ed45f764b77a1a, type: 3}

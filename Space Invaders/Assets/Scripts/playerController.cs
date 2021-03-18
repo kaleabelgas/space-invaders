@@ -5,14 +5,24 @@ using UnityEngine.SceneManagement;
 
 public class playerController : MonoBehaviour
 {
+    public static playerController pcInstance;
+
     public Rigidbody2D playerRB;
     public Transform firepoint;
-    public Scoring scoringSystem;
+    public GameObject effectPrefab;
 
     public float moveSpeed;
     public float playerHealth = 100f;
+    public float shakeDuration;
+    public float shakeStrength;
     private Vector2 moveDirection;
 
+
+
+    private void Start()
+    {
+        pcInstance = this;
+    }
 
     private void Update()
     {
@@ -29,11 +39,15 @@ public class playerController : MonoBehaviour
 
     public void PlayerDamage(float collisionDamage)
     {
-        scoringSystem = GetComponent<Scoring>();
-        scoringSystem.updateHealth();
+        
         playerHealth -= collisionDamage;
-        if (playerHealth <= 0)
+        Scoring.scoringInstance.updateHealth();
+        cameraShake.instance.initializeShake(shakeStrength, shakeDuration);
+        GameObject playerHitEffect = Instantiate(effectPrefab, transform.position, transform.rotation);
+        if (playerHealth <= 0 )
+        {
             PlayerDie();
+        }
     }
 
     private void PlayerDie()
@@ -41,6 +55,7 @@ public class playerController : MonoBehaviour
         Destroy(gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 1);
     }
+
 
 
 
