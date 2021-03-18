@@ -6,13 +6,15 @@ public class enemyManager : MonoBehaviour
 {
     public static enemyManager EMInstance;
 
-    public int enemyHealth = 100;
+    public int enemyHealth;
     public int enemyPoint = 5;
     public float enemyCollisionDamage = 20;
+
     public GameObject deathEffect;
 
     private void Start()
     {
+        enemyHealth = enemySpawner.enemySpawnerInstance.defaultEnemyHealth;
         EMInstance = this;
     }
 
@@ -33,6 +35,7 @@ public class enemyManager : MonoBehaviour
     {
         Scoring.scoringInstance.AddScore(enemyPoint);
         GameObject dEffect = Instantiate(deathEffect, transform.position, transform.rotation);
+        cameraShake.instance.initializeShake(0.2f, 0.15f);
         Destroy(dEffect, 2);
         Destroy(gameObject);
     }

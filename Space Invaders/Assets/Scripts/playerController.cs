@@ -17,6 +17,8 @@ public class playerController : MonoBehaviour
     public float shakeStrength;
     private Vector2 moveDirection;
 
+
+
     private void Start()
     {
         pcInstance = this;

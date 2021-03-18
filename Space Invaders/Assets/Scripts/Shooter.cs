@@ -6,6 +6,8 @@ using UnityEngine.UI;
 public class Shooter : MonoBehaviour
 {
 
+    public static Shooter shooterInstance;
+
     public Transform playerTransform;
     public GameObject bulletPrefab;
     public Text textScore;
@@ -16,12 +18,27 @@ public class Shooter : MonoBehaviour
     private bool isShootingBullet = false;
 
 
+    private float secondsPassed = 0;
+
+    public int defaultBulletDamage = 50;
+
+    private void Start()
+    {
+        shooterInstance = this;
+    }
+
     // Update is called once per frame
     void Update()
     {
         if (Input.GetButton("Jump"))
         {
             StartCoroutine(Shoot(attackSpeed));
+        }
+        secondsPassed += Time.deltaTime;
+        if (secondsPassed >= 5)
+        {
+            defaultBulletDamage += 5;
+            secondsPassed = 0;
         }
 
     }

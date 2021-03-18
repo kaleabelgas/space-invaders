@@ -8,7 +8,14 @@ public class bulletManager : MonoBehaviour
     enemyManager enemy;
     public GameObject hitEffectPrefab;
     public Camera cam;
-    public int damage = 5;
+    private int damage = 50;
+
+    private void Start()
+    {
+        damage = Shooter.shooterInstance.defaultBulletDamage;
+    }
+
+
     private void OnTriggerEnter2D(Collider2D hitEnemy)
     {
         
