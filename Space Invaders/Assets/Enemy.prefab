@@ -135,6 +135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   enemyHealth: 100
-  enemyPoint: 10
+  enemyPoint: 20
   enemyCollisionDamage: 20
   deathEffect: {fileID: 8983583404752074904, guid: 389f215642fed5b479ed45f764b77a1a, type: 3}

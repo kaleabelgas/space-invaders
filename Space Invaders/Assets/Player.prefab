@@ -149,6 +149,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   playerRB: {fileID: 3621883771208746313}
   firepoint: {fileID: 0}
+  effectPrefab: {fileID: 0}
   moveSpeed: 10
   playerHealth: 100
   shakeDuration: 0
@@ -170,6 +171,7 @@ MonoBehaviour:
   textScore: {fileID: 0}
   bulletForce: 20
   attackSpeed: 0.1
+  defaultBulletDamage: 50
 --- !u!114 &3621883771208746318
 MonoBehaviour:
   m_ObjectHideFlags: 0

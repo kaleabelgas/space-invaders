@@ -11,9 +11,9 @@ GameObject:
   - component: {fileID: 8983583404752074887}
   - component: {fileID: 8983583404752074886}
   - component: {fileID: 8983583404752074905}
-  - component: {fileID: 607641278130177630}
+  - component: {fileID: 4233779975849209416}
   m_Layer: 0
-  m_Name: deathEffect
+  m_Name: playerDeathEffect
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4863,7 +4863,7 @@ ParticleSystemRenderer:
   m_Mesh2: {fileID: 0}
   m_Mesh3: {fileID: 0}
   m_MaskInteraction: 0
---- !u!82 &607641278130177630
+--- !u!82 &4233779975849209416
 AudioSource:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -4873,7 +4873,7 @@ AudioSource:
   m_Enabled: 1
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
-  m_audioClip: {fileID: 8300000, guid: 44ab2be4edb460048a7c0d7ef102cc69, type: 3}
+  m_audioClip: {fileID: 8300000, guid: 74737499e09112f41baafe89da3ddf76, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
